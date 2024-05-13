@@ -1,10 +1,13 @@
 import React from "react";
-import { Container, Typography, Box, Button, Grid } from "@mui/material";
+import { Typography, Box, Button, Grid, CardMedia } from "@mui/material";
+import introVideo from '../../src/assets/video/intro.mp4'
+
+
 function Benefits() {
   return (
     <>
-      <Box backgroundColor="#fffcef">
-        <Grid container spacing={8} px={5} py={10}>
+      <Box backgroundColor="#fffcef" maxWidth='1440px' margin='auto'>
+        <Grid container spacing={8} pl={10} py={10}>
           <Grid item md={6}>
             <Typography
               variant="subtitle1"
@@ -42,6 +45,7 @@ function Benefits() {
               display="flex"
               align="center"
               lineHeight={2.5}
+              mb={3}
             >
               <Box
                 sx={{
@@ -79,6 +83,7 @@ function Benefits() {
               display="flex"
               align="center"
               lineHeight={4}
+              mb={3}
             >
               <Box
                 sx={{
@@ -117,6 +122,7 @@ function Benefits() {
               align="center"
               lineHeight={2}
               fontWeight={600}
+              mb={3}
             >
               <Box
                 sx={{
@@ -156,7 +162,8 @@ function Benefits() {
               // lineHeight={40}
               lineHeight={2}
               padding="2px"
-              marginTop={1.5}
+              mb={3}
+
             >
               <Box
                 sx={{
@@ -191,49 +198,18 @@ function Benefits() {
               </Box>
             </Typography>
           </Grid>
-          <Grid item md={6} borderRadius="30rem" textAlign="left">
+          <Grid item md={6} borderRadius="30rem" textAlign="left" sx={{ display: 'flex',
+                justifyContent: 'center'}}>
             <Box
               sx={{
-                border: "2px solid #fffcef",
-                boxShadow: "2px -2px 4px gray",
-                padding: "15px 15px",
+                borderRadius: '12px',
+                overflow: 'hidden',
+                height: '100vh',
+                width: 'fit-content',
               }}
             >
-              {/* <iframe
-                max-width="560"
-                width="95%"
-                height="515" // Set the height as per your requirements
-                src="https://www.youtube.com/embed/Y7UwDE8hblw?si=31o4_cwtsVqzG-3q" // Replace VIDEO_ID with the actual video's ID
-                frameborder="0"
-                allowfullscreen
-              ></iframe> */}
+              <video src={introVideo} height='100%' controls></video>
 
-              <Typography
-                variant="body"
-                lineHeight={1.7}
-                sx={{ color: "#64748B" }}
-              >
-                👋 Hello! I'm <b>Noman Gul</b>, a passionate
-                <b> Full Stack Developer </b> based in Karachi, Pakistan. With a
-                focus on front-end development, I thrive on creating seamless
-                and visually appealing web and mobile experiences. My expertise
-                lies in crafting user interfaces that not only meet functional
-                requirements but also elevate the overall user experience. 🚀 As
-                a seasoned professional in the tech industry, I've honed my
-                skills to not just meet but exceed the expectations of clients
-                and users alike. I take pride in my work as a frontend
-                specialist, bringing ideas to life through code and design. 💻
-                Currently, I'm actively involved in growing my freelance team,
-                where we collaborate to deliver cutting-edge solutions. Being
-                part of the dynamic world of technology, I stay abreast of the
-                latest trends, ensuring that my work remains innovative and
-                future-ready. 🌐 When it comes to communication, I'm dedicated
-                to enhancing my skills continually. Effective communication is
-                not just a goal for me; it's a journey I embrace to ensure
-                seamless collaboration with teams and clients. ✨ Let's connect
-                and explore the possibilities of creating exceptional digital
-                experiences together!
-              </Typography>
             </Box>
           </Grid>
         </Grid>

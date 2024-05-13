@@ -1,24 +1,41 @@
-import { Container, Typography, Box, Button, Grid } from "@mui/material";
-import { Email, GitHub, LinkedIn, Twitter } from "@mui/icons-material";
-import PersonIcon from "@mui/icons-material/Person";
+import { Container, Typography, Box, Button, Grid, Link } from "@mui/material";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function HeroSectionOne() {
+  const text = ['Landing Page', 'MVP', 'AI Web App', 'Chrome Extension' ]
+  // const [animateText, setAnimateText] = useState('')
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(()=>{
+    const id = setInterval(()=>{
+      setCurrentIndex(prev=> {
+         if (prev < text.length) {
+           return prev + 1
+         } else{
+          return 0
+         }
+      })
+    }, 4000)
+    return () => {
+      clearInterval(id);
+    };
+  },[text])
+
   return (
-    <Grid
+    <Box width={'100%'} bgcolor={'#fef5d1'}>
+          <Grid
       container
       alignItems="center"
       justifyContent="space-evenly"
-      sx={{ backgroundColor: "#fef5d1" }}
+      sx={{ width: '100%', maxWidth: '1440px', margin: 'auto', minHeight: '100vh' }}
     >
       <Grid item md={6}>
         <Container sx={{ paddingY: 22 }}>
-          <Typography
-            variant="h3"
+          <Typography            variant="h3"
             component="h4"
             textAlign="center"
-            sx={{ textAlign: { xs: "center", md: "left" } }}
+            sx={{ textAlign: { xs: "center", md: "left" }, fontWeight: '800' }}
           >
             Turn your Idea into a
           </Typography>
@@ -28,11 +45,16 @@ function HeroSectionOne() {
             component="h4"
             sx={{
               textAlign: { xs: "center", md: "left", color: "orange" },
-              fontSize: { xs: 20, md: 37 },
+              fontSize: { xs: 20, md: 37, lg: 48},
+              overflow: 'hidden',
+              whiteSpace: 'nowrap',
+              borderRight: '4px solid white',
+              fontWeight: 800
             }}
             textAlign="center"
+            className="animate-typing"
           >
-            Landing Page, MVP, AI Web App,Chrome Extension
+            {text[currentIndex]}
           </Typography>
 
           <Typography
@@ -43,32 +65,10 @@ function HeroSectionOne() {
           >
             Crafting Code and Building the Future: Kick-ass Software for
             Startups, One Flat Fee.
-            <Box className="icon">
-              <a href="https://github.com/NomanGul" target="_blank">
-                <GitHub sx={{ color: "orange", margin: "5px 0px" }} />{" "}
-              </a>
-              <a
-                href="https://www.linkedin.com/in/noman-gul/?originalSubdomain=pk"
-                target="_blank"
-              >
-                <LinkedIn sx={{ color: "orange", margin: "5px 10px" }} />
-              </a>
-
-              <a href="https://twitter.com/NomanGulKhan" target="_blank">
-                {" "}
-                <Twitter sx={{ color: "orange", margin: "5px 10px" }} />{" "}
-              </a>
-
-              <a href="mailto:nomangul2001@gmail.com" target="_blank">
-                <Email sx={{ color: "orange", margin: "5px 10px" }} />
-              </a>
-              <a href="https://www.nomangul.com/" target="_blank">
-                <PersonIcon sx={{ color: "orange", margin: "5px 10px" }} />
-              </a>
-            </Box>
           </Typography>
 
           <Box paddingTop={1} sx={{ display: { xs: "flex", md: "flex" } }}>
+            <a href="https://cal.com/nomangul" target="_blank">
             <Button
               variant="contained"
               sx={{
@@ -80,6 +80,8 @@ function HeroSectionOne() {
             >
               Book a Call
             </Button>
+            </a>
+          
           </Box>
         </Container>
       </Grid>
@@ -96,6 +98,8 @@ function HeroSectionOne() {
         </Box>
       </Grid>
     </Grid>
+    </Box>
+
   );
 }
 

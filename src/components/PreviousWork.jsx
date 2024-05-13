@@ -31,12 +31,12 @@ function PreviousWork() {
         py={10}
       >
         <Grid item md={4}>
-          <Box className="animation">
+          <Box className="animation work_card">
             <img
               src="https://futureideas.dev/tweet_niche.png"
               maxWidth={370}
               width="100%"
-              style={{ borderRadius: "15px", boxShadow: "2.5px 2px 5px gray" }}
+              style={{ borderRadius: "15px", boxShadow: "2.5px 2px 5px gray", }}
               // height={450}
             />
           </Box>
@@ -86,7 +86,7 @@ function PreviousWork() {
         </Grid>
 
         <Grid item md={4}>
-          <Box>
+          <Box className='work_card'>
             <img
               src="https://futureideas.dev/linklessgpt.png"
               // width={370}
@@ -142,7 +142,7 @@ function PreviousWork() {
         </Grid>
 
         <Grid item md={4}>
-          <Box>
+          <Box className='work_card'>
             <img
               src="https://futureideas.dev/blackblocks.png"
               // width={370}

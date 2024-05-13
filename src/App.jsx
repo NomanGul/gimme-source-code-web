@@ -13,7 +13,7 @@ import "./App.css";
 
 function App() {
   return (
-    < >
+    <React.Fragment >
       <ResponsiveAppBar />
       <HeroSectionOne />
 
@@ -25,7 +25,7 @@ function App() {
       <Benefits/>
 
       <Prices/>
-    </>
+    </React.Fragment>
 
     
   );

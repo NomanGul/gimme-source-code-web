@@ -53,3 +53,33 @@ a:hover{
   margin-bottom: -1.9rem;
 }
 
+@keyframes typing {
+  0%{
+    width: 0;
+    visibility: hidden;
+  }
+  100%{
+    width: 100%;
+
+  }
+}
+
+@keyframes blink {
+50% {
+    border-color: transparent;
+}
+  
+100% {
+  border-color: #fff;
+}
+}
+
+
+.animate-typing{
+  animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+}
+.work_card:hover{
+    rotate: -3deg;
+    transition: all ease-in-out 0.3s;
+    
+}
