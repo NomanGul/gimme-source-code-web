@@ -140,9 +140,9 @@ function ResponsiveAppBar() {
                 // id="moveToService"
 
                 component="a"
-                href="#moveToService"
+                // href="#moveToService"
                 // component="a"
-                // href="#pricing"
+                href="#pricing"
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{
