@@ -1,86 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Red+Hat+Display&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Red+Hat+Display&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Josefin Sans' !important;
-    /* text-decoration: none; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans" !important;
 }
 
-
 a {
-    text-decoration: none;
-    /* color:"#64748B" !important; */
-    /* background-color: red; */
-    /* color: gray; */
-    /* color:"#64748B" */
+  text-decoration: none;
 
-    /* color: rgb(125, 110, 110); */
-    color: gray;
+  color: gray;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .icon:hover {
-    color: "brown";
-    cursor: pointer;
+  color: "brown";
+  cursor: pointer;
 }
 
-.animation {}
-
-
 .animation:hover {
-    /* transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)); */
-
-    /* transition-duration: .3s;
-  transition-timing-function: cubic-bezier(.4,0,.2,1);
-  transition-property: transform;
-  transition-duration: .15s; */
-    /* background-color: red; */
-
-    --tw-rotate: -2deg;
-    /* transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)); */
+  --tw-rotate: -2deg;
 }
 
 .bracket {
-    /* background-color: red; */
-    /* margin-top: -4rem; */
-    margin-bottom: -1.9rem;
+  margin-bottom: -1.9rem;
 }
 
 @keyframes typing {
-    0% {
-        width: 0;
-        visibility: hidden;
-    }
+  0% {
+    width: 0;
+    visibility: hidden;
+  }
 
-    100% {
-        width: 100%;
-
-    }
+  100% {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+  50% {
+    border-color: transparent;
+  }
 
-    100% {
-        border-color: #fff;
-    }
+  100% {
+    border-color: #fff;
+  }
 }
 
-
 .animate-typing {
-    animation: typing 2s steps(20) infinite alternate, blink .7s infinite;
+  animation: typing 2s steps(20) infinite alternate, blink 0.7s infinite;
 }
 
 .work_card:hover {
-    rotate: -3deg;
-    transition: all ease-in-out 0.3s;
-
+  rotate: -3deg;
+  transition: all ease-in-out 0.3s;
 }
